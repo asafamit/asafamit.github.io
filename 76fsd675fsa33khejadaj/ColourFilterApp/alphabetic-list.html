@@ -1,0 +1,71 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>Retail Express</title>
+    <meta name="description" content="">
+
+    <!-- Mobile viewport optimized: h5bp.com/viewport -->
+    <meta name="viewport" content="width=device-width">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="styles/kendo.common.min.css"/>
+    <link rel="stylesheet" href="styles/kendo.default.min.css"/>
+    <link rel="stylesheet" href="styles/app.css"/>
+
+</head>
+<body class="main">
+
+    <h2>Choose colours to filter your search results</h2>
+    <!-- begin searchFilter" -->
+    <div id="colour-search-filter"></div>
+    <!-- end searchFilter -->
+
+    <!-- begin listView -->
+    <div id="colour-listview"></div>
+    <!-- end listView -->
+
+    <!-- begin alphabeticFilter -->
+    <ul id="colour-alphabetic-filter"></ul>
+    <!-- end alphabeticFilter -->
+
+    <!-- begin selection control -->
+    <div id="colour-selected-control">
+      <button id="removeFilter" class="k-button k-state-selected">Remove Filter</button>
+      <label><input type="checkbox" id="toggleSelected" /> Toggle Only Show Selected</label>
+      <span>
+        <span data-bind="text: selectedColoursViewModel" id="selectedColoursCount">0</span> Colours selected
+      </span>
+    </div>
+    <!-- end selection control -->
+
+    <!-- begin scripts -->
+
+    <script type="text/x-kendo-tmpl" id="listview-template">
+      <span class="colourItem">
+        <span style="height:1em; width:1em; background-color:#:ColourHex#; border:1px solid black">&nbsp;&nbsp;</span>
+        <label><input type="checkbox" class="colour-check" data-bind="checked: selectedColours" value="Colour_#:ColourId#" /><span class="checkbox">#:ColourName#</span></label>
+      </span>
+    </script>
+
+    <script type="text/x-kendo-tmpl" id="alphabetic-template">
+     <li class="k-alphabetic-filter"><a filter="#:data#" class="k-button" id="alphaFilter#:data#">#:data#</a></li>
+    </script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/kendo.web.min.js"></script>
+    <script src="js/kendo.widget.alphabetic.filter.js"></script>
+    <script src="js/kendo.widget.search.filter.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <!-- end scripts -->
+
+</body>
+
+
+
+</html>

@@ -1,0 +1,46 @@
+body {
+  font-family: sans-serif;
+}
+
+#colour-alphabetic-filter {
+  list-style-type: none;
+  background-color: #CCCCCC;
+  margin: 10px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+#colour-alphabetic-filter li{
+  margin: 2px;
+}
+
+#colour-selected-control {
+  clear: left;
+  padding-top: 5px;
+}
+
+#colour-listview {
+    padding: 10px 5px;
+    margin-bottom: -1px;
+    height: 200px;
+    overflow: auto;
+}
+.colourItem {
+    float: left;
+    position: relative;
+    width: 200px;
+    height: 2em;
+    margin: 0 5px;
+    padding: 0;
+}
+
+#removeFilter {
+    margin-right: 8em;
+}
+
+#selectedColoursCount {
+    margin-left: 8em;
+}
+
+.k-alphabetic-filter a {
+  width: 2em;
+}
